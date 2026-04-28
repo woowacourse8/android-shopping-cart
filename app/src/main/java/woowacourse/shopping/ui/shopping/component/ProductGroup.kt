@@ -22,7 +22,7 @@ fun ProductGroup(
         verticalArrangement = Arrangement.spacedBy(12.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        items(products.toList()) { product ->
+        items(items = products.toList(), key = { it.id }) { product ->
             ProductUnit(product)
         }
     }
